@@ -94,14 +94,20 @@ public partial class App : System.Windows.Application
 
         _hook.OnScroll += (direction) =>
         {
-            _volumeController.ChangeVolume(direction);
-            ShowOSD();
+            Dispatcher.Invoke(() =>
+            {
+                _volumeController?.ChangeVolume(direction);
+                ShowOSD();
+            });
         };
 
         _hook.OnMiddleClickShift += () =>
         {
-            _volumeController.CycleAudioDevice();
-            ShowOSD();
+            Dispatcher.Invoke(() =>
+            {
+                _volumeController?.CycleAudioDevice();
+                ShowOSD();
+            });
         };
 
         MemoryOptimizer.TrimWorkingSet();

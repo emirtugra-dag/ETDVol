@@ -84,7 +84,7 @@ public static class SettingsManager
             string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule?.FileName ?? "";
 
             if (enable && !string.IsNullOrEmpty(exePath))
-                key.SetValue("ETDVol", $"\"{exePath}\"");
+                key.SetValue("ETDVol", $"\"{exePath}\" -autostart");
             else
                 key.DeleteValue("ETDVol", false);
         }

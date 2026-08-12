@@ -133,6 +133,7 @@ public partial class MainWindow : Window
             var procInfo = new ProcessStartInfo
             {
                 FileName = currentExe,
+                Arguments = "-autostart",
                 UseShellExecute = true
             };
             Process.Start(procInfo);
