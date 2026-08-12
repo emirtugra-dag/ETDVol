@@ -64,11 +64,13 @@ public partial class OSDWindow : Window
     {
         _timer.Stop();
         this.Hide();
+        MemoryOptimizer.TrimWorkingSet();
     }
 
     private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
     {
         e.Cancel = true;
         this.Hide();
+        MemoryOptimizer.TrimWorkingSet();
     }
 }

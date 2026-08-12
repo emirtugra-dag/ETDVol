@@ -70,6 +70,8 @@ public partial class App : System.Windows.Application
             _volumeController.CycleAudioDevice();
             ShowOSD();
         };
+
+        MemoryOptimizer.TrimWorkingSet();
     }
 
     private void HideTrayIcon()

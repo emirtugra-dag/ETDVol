@@ -140,4 +140,10 @@ public partial class MainWindow : Window
         
         System.Windows.Application.Current.Shutdown();
     }
+
+    protected override void OnClosed(EventArgs e)
+    {
+        base.OnClosed(e);
+        MemoryOptimizer.TrimWorkingSet();
+    }
 }
