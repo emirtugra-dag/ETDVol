@@ -249,7 +249,7 @@ public partial class SetupWindow : Window
             using var appKey = key.CreateSubKey("ETDVol");
             if (appKey != null)
             {
-                appKey.SetValue("DisplayName", "ETDVol Ses Kontrolü");
+                appKey.SetValue("DisplayName", "ETDVol Audio Control");
                 appKey.SetValue("DisplayIcon", targetExe);
                 appKey.SetValue("DisplayVersion", "1.0.0");
                 appKey.SetValue("Publisher", "ETDVol");
