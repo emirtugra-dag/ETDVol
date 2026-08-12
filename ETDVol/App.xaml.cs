@@ -94,7 +94,7 @@ public partial class App : System.Windows.Application
 
         _hook.OnScroll += (direction) =>
         {
-            Dispatcher.Invoke(() =>
+            Dispatcher.InvokeAsync(() =>
             {
                 _volumeController?.ChangeVolume(direction);
                 ShowOSD();
@@ -103,7 +103,7 @@ public partial class App : System.Windows.Application
 
         _hook.OnMiddleClickShift += () =>
         {
-            Dispatcher.Invoke(() =>
+            Dispatcher.InvokeAsync(() =>
             {
                 _volumeController?.CycleAudioDevice();
                 ShowOSD();
