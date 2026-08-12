@@ -94,3 +94,12 @@ This project is licensed under the terms of the custom **[ETDVol License](LICENS
 
 1. **Disclaimer of Liability / Sorumluluk Reddi**: Provided "AS-IS" without warranty of any kind. The author holds zero liability for any damages or system issues.
 2. **Trademark & Logo Restrictions / Marka Kısıtlaması**: The name **"ETDVol"**, official icons, logos, and visual branding assets are reserved property and may NOT be used, modified, or re-distributed for commercial products or derivative works without explicit written permission.
+
+---
+
+<div align="center">
+
+🤖 *This project was created on Google Antigravity using Gemini 3.6 Flash.*  
+🤖 *Bu proje Gemini 3.6 Flash kullanılarak Antigravity üzerinde oluşturulmuştur.*
+
+</div>
