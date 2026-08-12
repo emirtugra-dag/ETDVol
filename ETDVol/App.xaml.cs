@@ -8,10 +8,15 @@ namespace ETDVol;
 
 public partial class App : System.Windows.Application
 {
+    private const string MutexName = "ETDVol_SingleInstance_Mutex_v1";
+    private const string EventName = "ETDVol_OpenSettings_Event_v1";
+
     private Mutex? _mutex;
+    private EventWaitHandle? _eventWaitHandle;
     private WindowsHook? _hook;
     private VolumeController? _volumeController;
     private OSDWindow? _osdWindow;
+    private MainWindow? _mainWindow;
     private System.Windows.Forms.NotifyIcon? _notifyIcon;
 
     protected override void OnStartup(StartupEventArgs e)
@@ -19,25 +24,54 @@ public partial class App : System.Windows.Application
         base.OnStartup(e);
 
         bool createdNew;
-        _mutex = new Mutex(true, "ETDVol_SingleInstance_Mutex", out createdNew);
+        _mutex = new Mutex(true, MutexName, out createdNew);
+
         if (!createdNew)
         {
+            // İkinci bir kopya açılmaya çalışıldığında mevcut uygulamaya ayarları açma sinyali gönder
+            SendOpenSettingsSignal();
             Current.Shutdown();
             return;
         }
 
         SettingsManager.Load();
+        StartSingleInstanceListener();
 
-        bool isSettingsMode = e.Args.Contains("-settings");
-        if (isSettingsMode)
+        StartBackgroundService();
+
+        // Otomatik başlangıçta (-autostart veya --autostart) ayarlar penceresi açılmaz, arka planda kalır.
+        // Manuel çalıştırmada veya kısayoldan açılışta ayarlar penceresi açılır.
+        bool isAutostart = e.Args.Any(a => a.Equals("-autostart", StringComparison.OrdinalIgnoreCase) || a.Equals("--autostart", StringComparison.OrdinalIgnoreCase));
+        if (!isAutostart)
         {
-            var mainWindow = new MainWindow();
-            mainWindow.Show();
+            OpenSettingsWindow();
         }
-        else
+    }
+
+    private void StartSingleInstanceListener()
+    {
+        try
         {
-            StartBackgroundService();
+            _eventWaitHandle = new EventWaitHandle(false, EventResetMode.AutoReset, EventName);
+            ThreadPool.RegisterWaitForSingleObject(_eventWaitHandle, (state, timedOut) =>
+            {
+                Dispatcher.Invoke(() =>
+                {
+                    OpenSettingsWindow();
+                });
+            }, null, -1, false);
         }
+        catch { }
+    }
+
+    private static void SendOpenSettingsSignal()
+    {
+        try
+        {
+            using var evt = EventWaitHandle.OpenExisting(EventName);
+            evt.Set();
+        }
+        catch { }
     }
 
     private void StartBackgroundService()
@@ -66,7 +100,6 @@ public partial class App : System.Windows.Application
 
         _hook.OnMiddleClickShift += () =>
         {
-            // Shift + Tek Tıklama: Doğrudan ses cihazını değiştir
             _volumeController.CycleAudioDevice();
             ShowOSD();
         };
@@ -102,26 +135,29 @@ public partial class App : System.Windows.Application
         _notifyIcon.Visible = true;
         
         var contextMenu = new System.Windows.Forms.ContextMenuStrip();
-        contextMenu.Items.Add("Ayarlar (Settings)", null, (s, e) => OpenSettings());
+        contextMenu.Items.Add("Ayarlar (Settings)", null, (s, e) => OpenSettingsWindow());
         contextMenu.Items.Add("Çıkış (Exit)", null, (s, e) => ExitApp());
         _notifyIcon.ContextMenuStrip = contextMenu;
         
-        _notifyIcon.DoubleClick += (s, e) => OpenSettings();
+        _notifyIcon.DoubleClick += (s, e) => OpenSettingsWindow();
     }
 
-    private void OpenSettings()
+    public void OpenSettingsWindow()
     {
-        foreach (Window w in System.Windows.Application.Current.Windows)
+        if (_mainWindow == null || !_mainWindow.IsLoaded)
         {
-            if (w is MainWindow mw)
-            {
-                mw.Activate();
-                return;
-            }
+            _mainWindow = new MainWindow();
         }
-        var mainWnd = new MainWindow();
-        mainWnd.Show();
-        mainWnd.Activate();
+
+        _mainWindow.Show();
+        if (_mainWindow.WindowState == WindowState.Minimized)
+        {
+            _mainWindow.WindowState = WindowState.Normal;
+        }
+        _mainWindow.Activate();
+        _mainWindow.Topmost = true;
+        _mainWindow.Topmost = false;
+        _mainWindow.Focus();
     }
     
     private void ExitApp()
@@ -145,7 +181,7 @@ public partial class App : System.Windows.Application
                 _osdWindow = new OSDWindow();
                 _osdWindow.OnOSDClicked += () =>
                 {
-                    Dispatcher.Invoke(() => OpenSettings());
+                    Dispatcher.Invoke(() => OpenSettingsWindow());
                 };
             }
             if (_volumeController != null)
@@ -159,6 +195,7 @@ public partial class App : System.Windows.Application
 
     protected override void OnExit(ExitEventArgs e)
     {
+        _eventWaitHandle?.Dispose();
         _hook?.Dispose();
         _mutex?.ReleaseMutex();
         base.OnExit(e);

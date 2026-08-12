@@ -151,7 +151,7 @@ public partial class SetupWindow : Window
                     if (runKey != null)
                     {
                         if (autoStart)
-                            runKey.SetValue("ETDVol", $"\"{targetExe}\"");
+                            runKey.SetValue("ETDVol", $"\"{targetExe}\" -autostart");
                         else
                             runKey.DeleteValue("ETDVol", false);
                     }
