@@ -252,7 +252,10 @@ public partial class SetupWindow : Window
                 appKey.SetValue("DisplayName", "ETDVol Audio Control");
                 appKey.SetValue("DisplayIcon", targetExe);
                 appKey.SetValue("DisplayVersion", "1.0.0");
-                appKey.SetValue("Publisher", "ETDVol");
+                appKey.SetValue("Publisher", "Emir Tuğra Dağ");
+                appKey.SetValue("HelpLink", "https://github.com/emirtugra-dag/ETDVol");
+                appKey.SetValue("URLInfoAbout", "https://github.com/emirtugra-dag/ETDVol");
+                appKey.SetValue("URLUpdateInfo", "https://github.com/emirtugra-dag/ETDVol/releases");
                 appKey.SetValue("UninstallString", $"\"{uninstallExe}\"");
                 appKey.SetValue("InstallLocation", targetDir);
                 appKey.SetValue("EstimatedSize", 4096, RegistryValueKind.DWord);
