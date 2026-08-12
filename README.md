@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔊 ETDVol
+# ETDVol
 
 <img src="app.png" width="128" height="128" alt="ETDVol Logo" style="border-radius: 18px;" />
 
@@ -9,39 +9,39 @@
 [![License](https://img.shields.io/badge/License-Custom-orange.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows-blue.svg)](#)
 [![Framework](https://img.shields.io/badge/C%23-.NET%208%20WPF-purple.svg)](#)
-[![Language](https://img.shields.io/badge/Language-TR%20%7C%20EN-green.svg)](#-language--dil)
+[![Language](https://img.shields.io/badge/Language-TR%20%7C%20EN-green.svg)](#language--dil)
 [![Release](https://img.shields.io/badge/Release-v1.0.0-brightgreen.svg)](https://github.com/emirtugra-dag/ETDVol/releases/tag/v1.0.0)
 
 </div>
 
 ---
 
-## 💾 Direct Downloads / Doğrudan İndirme
+## Direct Downloads / Doğrudan İndirme
 
-* ⚙️ **Setup / Kurulum Sihirbazı**: [Download ETDVol_Setup.exe](https://github.com/emirtugra-dag/ETDVol/releases/download/v1.0.0/ETDVol_Setup.exe) *(Recommended / Tavsiye Edilen)*
-
----
-
-## 🌐 Language / Dil
-
-* [English](#-english)
-* [Türkçe](#-türkçe)
+* **Setup / Kurulum Sihirbazı**: [Download ETDVol_Setup.exe](https://github.com/emirtugra-dag/ETDVol/releases/download/v1.0.0/ETDVol_Setup.exe) *(Recommended / Tavsiye Edilen)*
 
 ---
 
-## 🇬🇧 English
+## Language / Dil
 
-### 🌟 Key Features
+* [English](#english)
+* [Türkçe](#türkçe)
 
-* 🔊 **Taskbar Mouse Scroll Volume Control**: Adjust master volume instantly by scrolling the mouse wheel anywhere over the Windows Taskbar.
-* 🎧 **Instant Audio Device Switching**: Press `Shift + Middle Click (Mouse Wheel Click)` on the Taskbar to switch seamlessly between your audio playback devices (Headphones, Speakers, etc.).
-* 🖥️ **Sleek On-Screen Display (OSD)**: Displays a clean, non-intrusive OSD at the bottom of your screen showing the active device name and current volume percentage.
-* 🚫 **Native Volume Interface Bypassed**: Smooth background volume control using Windows CoreAudio COM API without triggering the native OS volume interface.
-* ⚙️ **Comprehensive Settings Window**: Easily configure volume step size (1%-10%), dynamic acceleration, OSD duration, system tray icon, and choose which audio devices to include in the cycle loop.
-* 🌐 **Bilingual Support**: Built-in instant language toggle between English and Turkish (`TR | EN`).
-* 📦 **Single-File Native Installer**: Standalone setup wizard (`ETDVol_Setup.exe`) with custom installation folder selection, Windows autostart configuration, and Control Panel integration.
+---
 
-### ⌨️ Mouse Shortcuts
+## English
+
+### Key Features
+
+* **Taskbar Mouse Scroll Volume Control**: Adjust master volume instantly by scrolling the mouse wheel anywhere over the Windows Taskbar.
+* **Instant Audio Device Switching**: Press `Shift + Middle Click (Mouse Wheel Click)` on the Taskbar to switch seamlessly between your audio playback devices (Headphones, Speakers, etc.).
+* **Sleek On-Screen Display (OSD)**: Displays a clean, non-intrusive OSD at the bottom of your screen showing the active device name and current volume percentage.
+* **Native Volume Interface Bypassed**: Smooth background volume control using Windows CoreAudio COM API without triggering the native OS volume interface.
+* **Comprehensive Settings Window**: Easily configure volume step size (1%-10%), dynamic acceleration, OSD duration, system tray icon, and choose which audio devices to include in the cycle loop.
+* **Bilingual Support**: Built-in instant language toggle between English and Turkish (`TR | EN`).
+* **Single-File Native Installer**: Standalone setup wizard (`ETDVol_Setup.exe`) with custom installation folder selection, Windows autostart configuration, and Control Panel integration.
+
+### Mouse Shortcuts
 
 | Action | Shortcut | Description |
 | :--- | :--- | :--- |
@@ -49,7 +49,7 @@
 | **Switch Audio Device** | `Shift + Taskbar Middle Click` | Cycles to the next enabled audio playback device |
 | **Open Settings** | `Click OSD` / `Tray Double Click` | Opens the ETDVol Settings window |
 
-### 🏗️ Solution Architecture & Build
+### Solution Architecture & Build
 
 ETDVol consists of 3 modular projects targetting `.NET 8.0-windows`:
 
@@ -66,19 +66,19 @@ dotnet publish -c Release ETDVol.Setup/ETDVol.Setup.csproj -o Publish
 
 ---
 
-## 🇹🇷 Türkçe
+## Türkçe
 
-### 🌟 Öne Çıkan Özellikler
+### Öne Çıkan Özellikler
 
-* 🔊 **Görev Çubuğunda Fare Tekerleği İle Ses Kontrolü**: Fare imleciniz Windows Görev Çubuğunun üzerindeyken tekerleği yukarı/aşağı çevirerek ana ses seviyesini anında değiştirin.
-* 🎧 **Anında Ses Cihazı Değiştirme**: Görev Çubuğu üzerinde `Shift + Fare Orta Tuşuna (Tekerlek Tıklaması)` basarak bağlı ses çıkış cihazlarınız (Kulaklık, Hoparlör vb.) arasında doğrudan geçiş yapın.
-* 🖥️ **Şık Görsel Gösterge (OSD)**: Ses veya cihaz değiştiğinde ekranın alt kısmında aktif cihaz adını ve ses yüzdesini gösteren modern OSD paneli belirir.
-* 🚫 **Varsayılan Windows Ses Arayüzü Çıkmaz**: Windows CoreAudio COM API seviyesinde doğrudan ses kontrolü yapılarak varsayılan Windows ses arayüzü tetiklenmeden akıcı kontrol sağlanır.
-* ⚙️ **Kapsamlı Ayarlar Menüsü**: Ses değişim adımını (%1-%10), ivmelenmeyi, OSD gösterim süresini, sistem tepsisi simgesini ve döngüye dahil edilecek cihazları kolayca özelleştirin.
-* 🌐 **Çift Dil Desteği**: Türkçe ve İngilizce dilleri arasında anında geçiş imkanı.
-* 📦 **Tek Parça Kurulum Sihirbazı**: Özelleştirilebilir kurulum klasörü, Windows başlangıç tercihi ve Denetim Masası Program Ekle/Kaldır entegrasyonu sunan `ETDVol_Setup.exe`.
+* **Görev Çubuğunda Fare Tekerleği İle Ses Kontrolü**: Fare imleciniz Windows Görev Çubuğunun üzerindeyken tekerleği yukarı/aşağı çevirerek ana ses seviyesini anında değiştirin.
+* **Anında Ses Cihazı Değiştirme**: Görev Çubuğu üzerinde `Shift + Fare Orta Tuşuna (Tekerlek Tıklaması)` basarak bağlı ses çıkış cihazlarınız (Kulaklık, Hoparlör vb.) arasında doğrudan geçiş yapın.
+* **Şık Görsel Gösterge (OSD)**: Ses veya cihaz değiştiğinde ekranın alt kısmında aktif cihaz adını ve ses yüzdesini gösteren modern OSD paneli belirir.
+* **Varsayılan Windows Ses Arayüzü Çıkmaz**: Windows CoreAudio COM API seviyesinde doğrudan ses kontrolü yapılarak varsayılan Windows ses arayüzü tetiklenmeden akıcı kontrol sağlanır.
+* **Kapsamlı Ayarlar Menüsü**: Ses değişim adımını (%1-%10), ivmelenmeyi, OSD gösterim süresini, sistem tepsisi simgesini ve döngüye dahil edilecek cihazları kolayca özelleştirin.
+* **Çift Dil Desteği**: Türkçe ve İngilizce dilleri arasında anında geçiş imkanı.
+* **Tek Parça Kurulum Sihirbazı**: Özelleştirilebilir kurulum klasörü, Windows başlangıç tercihi ve Denetim Masası Program Ekle/Kaldır entegrasyonu sunan `ETDVol_Setup.exe`.
 
-### ⌨️ Fare Kısayolları
+### Fare Kısayolları
 
 | Eylem | Kısayol | Açıklama |
 | :--- | :--- | :--- |
@@ -88,7 +88,7 @@ dotnet publish -c Release ETDVol.Setup/ETDVol.Setup.csproj -o Publish
 
 ---
 
-## 📄 License / Lisans
+## License / Lisans
 
 This project is licensed under the terms of the custom **[ETDVol License](LICENSE)**:
 
@@ -99,7 +99,7 @@ This project is licensed under the terms of the custom **[ETDVol License](LICENS
 
 <div align="center">
 
-🤖 *This project was created on Google Antigravity using Gemini 3.6 Flash.*  
-🤖 *Bu proje Gemini 3.6 Flash kullanılarak Antigravity üzerinde oluşturulmuştur.*
+*This project was created on Google Antigravity using Gemini 3.6 Flash.*  
+*Bu proje Gemini 3.6 Flash kullanılarak Antigravity üzerinde oluşturulmuştur.*
 
 </div>
