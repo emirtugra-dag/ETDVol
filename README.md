@@ -36,7 +36,7 @@
 * 🔊 **Taskbar Mouse Scroll Volume Control**: Adjust master volume instantly by scrolling the mouse wheel anywhere over the Windows Taskbar.
 * 🎧 **Instant Audio Device Switching**: Press `Shift + Middle Click (Mouse Wheel Click)` on the Taskbar to switch seamlessly between your audio playback devices (Headphones, Speakers, etc.).
 * 🖥️ **Sleek On-Screen Display (OSD)**: Displays a clean, non-intrusive OSD at the bottom of your screen showing the active device name and current volume percentage.
-* 🚫 **No Native Windows OS Flyout Spikes**: 100% smooth background volume control using Windows CoreAudio COM API without invoking ugly OS flyout overlays.
+* 🚫 **Native Volume Interface Bypassed**: Smooth background volume control using Windows CoreAudio COM API without triggering the native OS volume interface.
 * ⚙️ **Comprehensive Settings Window**: Easily configure volume step size (1%-10%), dynamic acceleration, OSD duration, system tray icon, and choose which audio devices to include in the cycle loop.
 * 🌐 **Bilingual Support**: Built-in instant language toggle between English and Turkish (`TR | EN`).
 * 📦 **Single-File Native Installer**: Standalone setup wizard (`ETDVol_Setup.exe`) with custom installation folder selection, Windows autostart configuration, and Control Panel integration.
@@ -73,7 +73,7 @@ dotnet publish -c Release ETDVol.Setup/ETDVol.Setup.csproj -o Publish
 * 🔊 **Görev Çubuğunda Fare Tekerleği İle Ses Kontrolü**: Fare imleciniz Windows Görev Çubuğunun üzerindeyken tekerleği yukarı/aşağı çevirerek ana ses seviyesini anında değiştirin.
 * 🎧 **Anında Ses Cihazı Değiştirme**: Görev Çubuğu üzerinde `Shift + Fare Orta Tuşuna (Tekerlek Tıklaması)` basarak bağlı ses çıkış cihazlarınız (Kulaklık, Hoparlör vb.) arasında doğrudan geçiş yapın.
 * 🖥️ **Şık Görsel Gösterge (OSD)**: Ses veya cihaz değiştiğinde ekranın alt kısmında aktif cihaz adını ve ses yüzdesini gösteren modern OSD paneli belirir.
-* 🚫 **Çirkin Windows Siyah Paneli Çıkmaz**: Windows CoreAudio COM API seviyesinde doğrudan ses kontrolü yapılarak ekranın sol üstünde çıkan çirkin varsayılan Windows panelleri tamamen engellenmiştir.
+* 🚫 **Varsayılan Windows Ses Arayüzü Çıkmaz**: Windows CoreAudio COM API seviyesinde doğrudan ses kontrolü yapılarak varsayılan Windows ses arayüzü tetiklenmeden akıcı kontrol sağlanır.
 * ⚙️ **Kapsamlı Ayarlar Menüsü**: Ses değişim adımını (%1-%10), ivmelenmeyi, OSD gösterim süresini, sistem tepsisi simgesini ve döngüye dahil edilecek cihazları kolayca özelleştirin.
 * 🌐 **Çift Dil Desteği**: Türkçe ve İngilizce dilleri arasında anında geçiş imkanı.
 * 📦 **Tek Parça Kurulum Sihirbazı**: Özelleştirilebilir kurulum klasörü, Windows başlangıç tercihi ve Denetim Masası Program Ekle/Kaldır entegrasyonu sunan `ETDVol_Setup.exe`.
