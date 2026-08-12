@@ -1,0 +1,45 @@
+ETDVol SOFTWARE LICENSE & TERMS OF USE
+
+Copyright (c) 2026 ETDVol
+
+===============================================================================
+1. DISCLAIMER OF LIABILITY & NO WARRANTY (SORUMLULUK REDDİ VE YÜKÜMLÜLÜK)
+===============================================================================
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. 
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Geliştirici/Yazar, yazılımın kullanımından doğabilecek doğrudan veya dolaylı
+hiçbir zarardan, sistem aksaklığından, veri kaybından veya donanım hasarından
+sorumlu tutulamaz. Yazılım herhangi bir garanti verilmeksizin "olduğu gibi" sunulur.
+
+===============================================================================
+2. TRADEMARK & LOGO RESTRICTIONS (İSİM VE LOGO KULLANIM KISITLAMALARI)
+===============================================================================
+The name "ETDVol", the official ETDVol logos, icons, graphics, and visual branding
+are proprietary assets and trademarks of the author.
+
+YOU ARE STRICTLY PROHIBITED FROM:
+- Using the name "ETDVol" for commercial products or derivative works.
+- Using, modifying, reproducing, or distributing the official ETDVol logo, icon, or visual assets without explicit written permission.
+- Impersonating or implying endorsement by the official ETDVol author/project.
+
+"ETDVol" ismi, resmi logosu, ikonu ve görsel marka ögeleri izinsiz olarak
+başka ürünlerde, türev projelerde veya ticari amaçlarla KULLANILAMAZ ve
+DAĞITILAMAZ.
+
+===============================================================================
+3. SOURCE CODE PERMISSIONS (KOD KULLANIM İZİNLERİ)
+===============================================================================
+Permission is hereby granted to inspect, modify, and build the source code for
+personal, non-commercial use, provided that the above copyright notice, this
+disclaimer of liability, and trademark restrictions are retained in all copies.
