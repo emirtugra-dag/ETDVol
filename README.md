@@ -12,6 +12,10 @@
 [![Language](https://img.shields.io/badge/Language-TR%20%7C%20EN-green.svg)](#language--dil)
 [![Release](https://img.shields.io/badge/Release-v1.0.0-brightgreen.svg)](https://github.com/emirtugra-dag/ETDVol/releases/tag/v1.0.0)
 
+<br />
+
+<img src="preview.png" alt="ETDVol On-Screen Display Preview" style="border-radius: 10px; max-width: 480px;" />
+
 </div>
 
 ---
