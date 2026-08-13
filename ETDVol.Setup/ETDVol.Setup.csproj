@@ -8,6 +8,10 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>ETDVol_Setup</AssemblyName>
+    <Title>ETDVol Setup Wizard</Title>
+    <Authors>Emir Tuğra Dağ</Authors>
+    <Company>Emir Tuğra Dağ</Company>
+    <Copyright>Copyright (c) 2026 Emir Tuğra Dağ</Copyright>
     <ApplicationIcon>..\app.ico</ApplicationIcon>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <PublishSingleFile>true</PublishSingleFile>

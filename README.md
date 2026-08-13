@@ -6,7 +6,7 @@
 
 ### Ultra-lightweight, zero-latency taskbar volume control & audio device switcher for Windows
 
-[![License](https://img.shields.io/badge/License-Custom-orange.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows-blue.svg)](#)
 [![Framework](https://img.shields.io/badge/C%23-.NET%208%20WPF-purple.svg)](#)
 [![Language](https://img.shields.io/badge/Language-TR%20%7C%20EN-green.svg)](#language--dil)
@@ -92,12 +92,14 @@ dotnet publish -c Release ETDVol.Setup/ETDVol.Setup.csproj -o Publish
 
 ---
 
-## License / Lisans
+## License, Brand IP & Disclaimer / Lisans, Marka Koruma ve Sorumluluk Reddi
 
-This project is licensed under the terms of the custom **[ETDVol License](LICENSE)**:
+This project is licensed under a combined license separating the Software Source Code from the Brand, Logo, and Trademark assets. See **[LICENSE](LICENSE)** for details.
 
-1. **Disclaimer of Liability / Sorumluluk Reddi**: Provided "AS-IS" without warranty of any kind. The author holds zero liability for any damages or system issues.
-2. **Trademark & Logo Restrictions / Marka Kısıtlaması**: The name **"ETDVol"**, official icons, logos, and visual branding assets are reserved property and may NOT be used, modified, or re-distributed for commercial products or derivative works without explicit written permission.
+- **Developer:** Emir Tuğra Dağ (Independent Developer / Bağımsız Geliştirici)
+- **Source Code License:** [MIT License](LICENSE) — The underlying source code is open-source.
+- **Brand & Logo Restrictions:** The product name **"ETDVol"**, official icons, logos, preview graphics, and visual branding assets are the personal intellectual property of **Emir Tuğra Dağ** (**All Rights Reserved / Tüm Hakları Saklıdır**). Unauthorized use, re-branding, or distribution of brand assets in derivative works without written consent is strictly prohibited.
+- **Absolute Disclaimer of Liability (AS IS):** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. THE DEVELOPER (EMİR TUĞRA DAĞ) ASSUMES ZERO LIABILITY FOR ANY DAMAGES, DATA LOSS, OR SYSTEM INSTABILITY ARISING FROM THE USE OF THIS SOFTWARE. ALL RISKS BELONG ENTIRELY TO THE USER.
 
 ---
 

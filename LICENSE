@@ -1,45 +1,55 @@
-ETDVol SOFTWARE LICENSE & TERMS OF USE
+ETDVol LICENSE & TERMS OF USE
 
-Copyright (c) 2026 ETDVol
+Copyright (c) 2026 Emir Tuğra Dağ
 
-===============================================================================
-1. DISCLAIMER OF LIABILITY & NO WARRANTY (SORUMLULUK REDDİ VE YÜKÜMLÜLÜK)
-===============================================================================
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. 
+This project is licensed under a combined license separating the Software Source Code from the Brand, Logo, and Trademark assets.
 
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
-INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-LIABILITY, WHETHER IN CONTRACT CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+--------------------------------------------------------------------------------
+1. SOFTWARE SOURCE CODE LICENSE (MIT License)
+--------------------------------------------------------------------------------
 
-Geliştirici/Yazar, yazılımın kullanımından doğabilecek doğrudan veya dolaylı
-hiçbir zarardan, sistem aksaklığından, veri kaybından veya donanım hasarından
-sorumlu tutulamaz. Yazılım herhangi bir garanti verilmeksizin "olduğu gibi" sunulur.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-===============================================================================
-2. TRADEMARK & LOGO RESTRICTIONS (İSİM VE LOGO KULLANIM KISITLAMALARI)
-===============================================================================
-The name "ETDVol", the official ETDVol logos, icons, graphics, and visual branding
-are proprietary assets and trademarks of the author.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-YOU ARE STRICTLY PROHIBITED FROM:
-- Using the name "ETDVol" for commercial products or derivative works.
-- Using, modifying, reproducing, or distributing the official ETDVol logo, icon, or visual assets without explicit written permission.
-- Impersonating or implying endorsement by the official ETDVol author/project.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-"ETDVol" ismi, resmi logosu, ikonu ve görsel marka ögeleri izinsiz olarak
-başka ürünlerde, türev projelerde veya ticari amaçlarla KULLANILAMAZ ve
-DAĞITILAMAZ.
+--------------------------------------------------------------------------------
+2. BRAND, LOGO, AND TRADEMARK POLICY (All Rights Reserved / Tüm Hakları Saklıdır)
+--------------------------------------------------------------------------------
 
-===============================================================================
-3. SOURCE CODE PERMISSIONS (KOD KULLANIM İZİNLERİ)
-===============================================================================
-Permission is hereby granted to inspect, modify, and build the source code for
-personal, non-commercial use, provided that the above copyright notice, this
-disclaimer of liability, and trademark restrictions are retained in all copies.
+[EN]
+The permission granted under Section 1 (Software Source Code License) applies ONLY to the source code of the Software. 
+
+It does NOT grant any rights, implied or otherwise, to use the product name "ETDVol", the application logo/icon (including app.png, app.ico, logo.ico, logo.png, preview.png, or any visual design elements), or the visual branding and identity of the project.
+
+The name "ETDVol", the official logo/icon, and all visual branding assets are the exclusive intellectual property of Emir Tuğra Dağ and are protected under trademark and unfair competition laws. All Rights Reserved. You may not copy, modify, distribute, or use the logo, name, or branding assets in any derivative work or separate application without express prior written permission from Emir Tuğra Dağ.
+
+[TR]
+Bölüm 1 (Yazılım Kaynak Kod Lisansı) kapsamında verilen izinler YALNIZCA yazılımın kaynak kodları için geçerlidir.
+
+Bu lisans, "ETDVol" ürün ismini, uygulama logosunu/ikonunu (app.png, app.ico, logo.ico, logo.png, preview.png ve diğer tüm görsel tasarım ögeleri dahil) veya projenin görsel marka kimliğini kullanma hakkı VERMEZ.
+
+"ETDVol" ismi, resmi logo/ikon ve tüm görsel marka ögeleri tamamen Emir Tuğra Dağ'ın mülkiyetindedir ve telif hakkı ile haksız rekabet kanunları kapsamında korunmaktadır. Tüm Hakları Saklıdır. Emir Tuğra Dağ'ın önceden verilmiş yazılı izni olmaksızın logonun, ismin veya marka ögelerinin kopyalanması, değiştirilmesi, dağıtılması veya başka bir yazılımda/türetilmiş çalışmada kullanılması kesinlikle yasaktır.
+
+--------------------------------------------------------------------------------
+3. ABSOLUTE DISCLAIMER OF LIABILITY (EKSİKSİZ SORUMLULUK REDDİ)
+--------------------------------------------------------------------------------
+
+[EN]
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR (EMİR TUĞRA DAĞ) "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, DATA LOSS, SYSTEM INSTABILITY, HARDWARE DAMAGE, OR BUSINESS INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE. ALL RISKS BELONG ENTIRELY TO THE USER.
+
+[TR]
+BU YAZILIM GELİŞTİRİCİ (EMİR TUĞRA DAĞ) TARAFINDAN "OLDUĞU GİBİ" (AS IS) SUNULMAKTADIR. YAZILIMIN KULLANIMINDAN VEYA KULLANILAMAMASINDAN, SİSTEM AKSAKLIKLARINDAN, VERİ KAYIPLARINDAN VEYA OLUŞABİLECEK HERHANGİ BİR DOĞRUDAN/DOLAYLI ZARARDAN GELİŞTİRİCİ (EMİR TUĞRA DAĞ) HİÇBİR KOŞULDA YASAL VEYA HUKUKİ OLARAK SORUMLU TUTULAMAZ. TÜM KULLANIM VE RİSK TAMAMEN KULLANICIYA AİTTİR. GELİŞTİRİCİNİN YAZILIMA GÜNCELLEME VEYA TEKNİK DESTEK SAĞLAMA ZORUNLULUĞU YOKTUR.

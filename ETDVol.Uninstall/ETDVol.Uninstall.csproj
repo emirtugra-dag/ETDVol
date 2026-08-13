@@ -7,6 +7,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <AssemblyName>Uninstall</AssemblyName>
+    <Title>ETDVol Uninstaller</Title>
+    <Authors>Emir Tuğra Dağ</Authors>
+    <Company>Emir Tuğra Dağ</Company>
+    <Copyright>Copyright (c) 2026 Emir Tuğra Dağ</Copyright>
     <ApplicationIcon>..\app.ico</ApplicationIcon>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <PublishSingleFile>true</PublishSingleFile>
