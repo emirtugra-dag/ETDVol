@@ -28,6 +28,18 @@ public class WindowsHook : IDisposable
     {
         _mouseProc = MouseHookCallback;
         
+        // Win32 P/Invoke stubs ve Görev Çubuğu HWND warm-up
+        try
+        {
+            IntPtr trayHwnd = FindWindow("Shell_TrayWnd", null);
+            if (trayHwnd != IntPtr.Zero)
+            {
+                _lastHwnd = trayHwnd;
+                _lastIsTaskbar = true;
+            }
+        }
+        catch { }
+
         using (Process curProcess = Process.GetCurrentProcess())
         {
             ProcessModule? curModule = curProcess.MainModule;
@@ -138,4 +150,5 @@ public class WindowsHook : IDisposable
     [DllImport("user32.dll")] private static extern IntPtr GetAncestor(IntPtr hwnd, uint gaFlags);
     [DllImport("user32.dll")] private static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
     [DllImport("user32.dll")] private static extern short GetAsyncKeyState(int vKey);
+    [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)] private static extern IntPtr FindWindow(string? lpClassName, string? lpWindowName);
 }

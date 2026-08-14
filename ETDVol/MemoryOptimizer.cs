@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace ETDVol;
 
@@ -11,17 +12,17 @@ public static class MemoryOptimizer
 
     public static void TrimWorkingSet()
     {
-        try
+        Task.Run(() =>
         {
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-            GC.Collect();
-            
-            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+            try
             {
-                SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, (IntPtr)(-1), (IntPtr)(-1));
+                GC.Collect(1, GCCollectionMode.Optimized, false);
+                if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+                {
+                    SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, (IntPtr)(-1), (IntPtr)(-1));
+                }
             }
-        }
-        catch { }
+            catch { }
+        });
     }
 }

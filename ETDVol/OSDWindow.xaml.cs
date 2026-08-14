@@ -22,6 +22,20 @@ public partial class OSDWindow : Window
         CenterOnScreen();
     }
 
+    public void PreWarm()
+    {
+        try
+        {
+            this.Opacity = 0;
+            this.Show();
+            this.UpdateLayout();
+            CenterOnScreen();
+            this.Hide();
+            this.Opacity = 1;
+        }
+        catch { }
+    }
+
     public void ShowUpdate(string deviceName, int volumePercent)
     {
         DeviceNameText.Text = deviceName;

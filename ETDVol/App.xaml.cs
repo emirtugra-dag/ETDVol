@@ -77,6 +77,15 @@ public partial class App : System.Windows.Application
     private void StartBackgroundService()
     {
         _volumeController = new VolumeController();
+        _volumeController.PreWarm();
+
+        _osdWindow = new OSDWindow();
+        _osdWindow.OnOSDClicked += () =>
+        {
+            Dispatcher.Invoke(() => OpenSettingsWindow());
+        };
+        _osdWindow.PreWarm();
+
         _hook = new WindowsHook();
         
         if (SettingsManager.Current.EnableTrayIcon)
@@ -109,8 +118,6 @@ public partial class App : System.Windows.Application
                 ShowOSD();
             });
         };
-
-        MemoryOptimizer.TrimWorkingSet();
     }
 
     private void HideTrayIcon()
@@ -180,23 +187,21 @@ public partial class App : System.Windows.Application
     {
         if (!SettingsManager.Current.EnableOSD) return;
 
-        Dispatcher.Invoke(() =>
+        if (_osdWindow == null)
         {
-            if (_osdWindow == null)
+            _osdWindow = new OSDWindow();
+            _osdWindow.OnOSDClicked += () =>
             {
-                _osdWindow = new OSDWindow();
-                _osdWindow.OnOSDClicked += () =>
-                {
-                    Dispatcher.Invoke(() => OpenSettingsWindow());
-                };
-            }
-            if (_volumeController != null)
-            {
-                string name = _volumeController.GetDefaultDeviceName();
-                int vol = _volumeController.GetVolumePercent();
-                _osdWindow.ShowUpdate(name, vol);
-            }
-        });
+                Dispatcher.Invoke(() => OpenSettingsWindow());
+            };
+        }
+
+        if (_volumeController != null)
+        {
+            string name = _volumeController.GetDefaultDeviceName();
+            int vol = _volumeController.GetVolumePercent();
+            _osdWindow.ShowUpdate(name, vol);
+        }
     }
 
     protected override void OnExit(ExitEventArgs e)

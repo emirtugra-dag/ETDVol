@@ -19,6 +19,17 @@ public class VolumeController
         RefreshDefaultDevice();
     }
 
+    public void PreWarm()
+    {
+        try
+        {
+            RefreshDefaultDevice();
+            GetDefaultDeviceName();
+            GetVolumePercent();
+        }
+        catch { }
+    }
+
     public void RefreshDefaultDevice()
     {
         _defaultDevice = null;
